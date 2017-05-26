@@ -17,19 +17,21 @@ class GalleryController extends Controller
     {
         $images = [
             'mers.JPG',
-            'mers.JPG',
-            'mers2.jpg',
-            'mers2.jpg',
-            'Benz.JPG',
             'Benz.JPG',
             'mers3.jpg',
-            'mers3.jpg'
+            'mers.JPG',
+            'mers2.jpg',
+            'mers3.jpg',
+            'Benz.JPG',
+            'mers3.jpg',
+            'Benz.JPG',
+            'mers3.jpg',
         ];
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $images ,
             $request->query->getInt('page', 1)/*page number*/,
-            4/*limit per page*/
+            3/*limit per page*/
         );
 
 
