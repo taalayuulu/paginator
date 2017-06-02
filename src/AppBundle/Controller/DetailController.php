@@ -9,7 +9,15 @@
 namespace src\AppBundle\Controller;
 
 
-class DetailController
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class DetailController extends Controller
 {
+    public function indexAction() {
+        $image = 'mers.JPG';
+        return $this->render('detail/index.html.twig' , [
+            'image' =>$image,
+        ]);
+    }
 
 }
