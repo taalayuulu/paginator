@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+    <div class="row">
+        <h2>Top Wallpapers For Abstract</h2>
+        <div class="row">
+            {% for image in abstract %}
+                <div class="col-sm-12 com-md-6">
+                    <div class="thumbnail">
+                        <img src="/images/{{ image }}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+        <div class="row">
+            <h2>Top Wallpapers For Summer</h2>
+            <div class="row">
+                {% for image in summer %}
+                    <div class="col-sm-12 com-md-6">
+                        <div class="thumbnail">
+                            <img src="/images/{{ image }}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <h2>Top Wallpapers For Witer</h2>
+            <div class="row">
+                {% for image in winter %}
+                    <div class="col-sm-12 com-md-6">
+                        <div class="thumbnail">
+                            <img src="/images/{{ image }}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    <div class="row">
+        <h2>Random Images</h2>
+        {% for image in randomizedImages %}
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="/images/{{ image }}" alt="">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
